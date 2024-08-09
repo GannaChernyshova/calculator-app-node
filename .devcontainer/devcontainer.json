@@ -1,0 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
+{
+	"name": "Node.js & PostgreSQL",
+	"dockerComposeFile": "../compose.yml",
+	"service": "web",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"remoteEnv": {
+		"TC_CLOUD_TOKEN": "${containerEnv:TC_CLOUD_TOKEN}",
+		"TCC_PROJECT_KEY": "calculator_app_node"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/eddumelendez/test-devcontainer/tcc:0.0.2": {}
+	},
+	"forwardPorts": [3000, 5432],
+	"postCreateCommand": "nohup /usr/local/share/tcc-agent > /usr/local/share/tcc-agent.log 2>&1 &"
+}
