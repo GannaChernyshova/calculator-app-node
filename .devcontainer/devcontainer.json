@@ -10,7 +10,7 @@
 		"TCC_PROJECT_KEY": "calculator_app_node"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/node:2": {},
 		"ghcr.io/eddumelendez/test-devcontainer/tcc:0.0.2": {}
 	},
 	"forwardPorts": [3000, 5432],
